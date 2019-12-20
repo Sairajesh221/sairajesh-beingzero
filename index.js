@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()//creating express object
-const port = process.env.PORT||3000
+const port = process.env.PORT || 3000
 app.use(express.static('frontend'))
 app.get('/', (req, res) => res.sendFile(__dirname+'/frontend/html/home.htm'))
 app.get('/login', (req, res) => res.send('Login!'))
